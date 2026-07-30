@@ -1,65 +1,263 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
+  const inputStyle = {
+    width: "100%",
+    marginTop: "8px",
+    padding: "14px",
+    border: "1px solid #dbe5f0",
+    borderRadius: "10px",
+    background: "#f8fafc",
+    color: "#0b1730",
+    fontSize: "15px",
+    outline: "none",
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <main
+      style={{
+        minHeight: "100vh",
+        display: "grid",
+        gridTemplateColumns: "1.05fr 0.95fr",
+        background: "#071326",
+        fontFamily: "Arial, sans-serif",
+      }}
+    >
+      <section
+        style={{
+          padding: "70px clamp(30px, 7vw, 100px)",
+          color: "white",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "10px",
+            fontSize: "26px",
+            fontWeight: "bold",
+          }}
+        >
+          <span
+            style={{
+              display: "grid",
+              placeItems: "center",
+              width: "40px",
+              height: "40px",
+              borderRadius: "12px",
+              background: "linear-gradient(135deg, #2563eb, #22d3ee)",
+            }}
+          >
+            F
+          </span>
+
+          Flow<span style={{ color: "#22d3ee", marginLeft: "-10px" }}>AI</span>
+        </div>
+
+        <p
+          style={{
+            marginTop: "65px",
+            color: "#22d3ee",
+            fontSize: "12px",
+            fontWeight: "bold",
+            letterSpacing: "1.6px",
+          }}
+        >
+          AI AUTOMATION FOR ROOFING COMPANIES
+        </p>
+
+        <h1
+          style={{
+            maxWidth: "650px",
+            margin: "14px 0 20px",
+            fontSize: "clamp(44px, 6vw, 72px)",
+            lineHeight: "1.04",
+            letterSpacing: "-3px",
+          }}
+        >
+          Your roofing business—always answering, always following up.
+        </h1>
+
+        <p
+          style={{
+            maxWidth: "620px",
+            color: "#9fb1c6",
+            fontSize: "18px",
+            lineHeight: "1.8",
+          }}
+        >
+          Manage leads, appointments, customer conversations, Google reviews,
+          and your AI receptionist from one powerful platform.
+        </p>
+
+        <div
+          style={{
+            display: "grid",
+            gap: "14px",
+            marginTop: "32px",
+            color: "#c5d3e1",
+            fontSize: "16px",
+          }}
+        >
+          <div>✓ 24/7 AI receptionist</div>
+          <div>✓ Automatic roofing estimate booking</div>
+          <div>✓ Roofing CRM and lead pipeline</div>
+          <div>✓ Text follow-up and review automation</div>
+        </div>
+      </section>
+
+      <section
+        style={{
+          padding: "30px",
+          display: "grid",
+          placeItems: "center",
+          background: "#eef5ff",
+        }}
+      >
+        <div
+          style={{
+            width: "min(480px, 100%)",
+            padding: "40px",
+            borderRadius: "24px",
+            background: "white",
+            boxShadow: "0 28px 80px rgba(7, 19, 38, 0.2)",
+          }}
+        >
+          <p
+            style={{
+              margin: "0",
+              color: "#2563eb",
+              fontSize: "12px",
+              fontWeight: "bold",
+              letterSpacing: "1.4px",
+            }}
+          >
+            WELCOME BACK
+          </p>
+
+          <h2
+            style={{
+              margin: "10px 0 8px",
+              color: "#0b1730",
+              fontSize: "36px",
+              letterSpacing: "-1px",
+            }}
+          >
+            Sign in to FlowAI
+          </h2>
+
+          <p
+            style={{
+              margin: "0 0 28px",
+              color: "#64748b",
+              lineHeight: "1.6",
+            }}
+          >
+            Access your roofing automation command center.
+          </p>
+
+          <label
+            style={{
+              display: "block",
+              marginBottom: "18px",
+              color: "#40536a",
+              fontSize: "12px",
+              fontWeight: "bold",
+            }}
+          >
+            EMAIL ADDRESS
+            <input
+              type="email"
+              placeholder="you@roofingcompany.com"
+              style={inputStyle}
+            />
+          </label>
+
+          <label
+            style={{
+              display: "block",
+              marginBottom: "12px",
+              color: "#40536a",
+              fontSize: "12px",
+              fontWeight: "bold",
+            }}
+          >
+            PASSWORD
+            <input
+              type="password"
+              placeholder="••••••••"
+              style={inputStyle}
+            />
+          </label>
+
+          <div style={{ textAlign: "right", marginBottom: "22px" }}>
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#"
+              style={{
+                color: "#2563eb",
+                fontSize: "13px",
+                fontWeight: "bold",
+                textDecoration: "none",
+              }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              Forgot password?
+            </a>
+          </div>
+
+          <Link
+            href="/dashboard"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              padding: "15px 20px",
+              borderRadius: "11px",
+              color: "white",
+              background: "#2563eb",
+              fontWeight: "bold",
+              textDecoration: "none",
+            }}
+          >
+            Sign In
+          </Link>
+
+          <p
+            style={{
+              marginTop: "22px",
+              color: "#64748b",
+              textAlign: "center",
+              fontSize: "14px",
+            }}
+          >
+            New to FlowAI?{" "}
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#"
+              style={{
+                color: "#2563eb",
+                fontWeight: "bold",
+                textDecoration: "none",
+              }}
             >
-              Learning
-            </a>{" "}
-            center.
+              Create an account
+            </a>
+          </p>
+
+          <p
+            style={{
+              margin: "28px 0 0",
+              paddingTop: "20px",
+              borderTop: "1px solid #e6edf5",
+              color: "#8a9bad",
+              textAlign: "center",
+              fontSize: "11px",
+            }}
+          >
+            Trusted by growth-minded roofing companies
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
